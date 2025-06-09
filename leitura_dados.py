@@ -77,7 +77,7 @@ def tratar_dados(df):
     df = df.replace(['', 'nan', 'NaN', 'NULL', 'null', 'None', 'none'], np.nan)
     
     # Converter colunas numéricas
-    colunas_numericas = ['Peso', 'Idade']
+    colunas_numericas = ['Peso', 'Idade', 'Quantidade (Kg)']
     for col in colunas_numericas:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors='coerce')
